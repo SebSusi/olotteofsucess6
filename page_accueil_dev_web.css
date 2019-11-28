@@ -9,7 +9,7 @@
       list-style-type: none;
       margin: 0;
       padding: 0;
-      overflow: hidden;
+      overflow: auto;
       background-color: white;
       position: fixed;
       top: 0;
@@ -42,7 +42,7 @@ body{
   background-color:#e5e7ea;
   color:#2d6da3;
   font-family: sans-serif;
-  overflow: hidden;
+  overflow: auto;
 }
 
 #centre {
@@ -87,7 +87,7 @@ body{
   width: 70%;
 }
 
-#home, #club, #param, #contact, #result {
+#home, #club, #param, #contact, #result #creation #join {
   padding-top: 3em;
   width: 100vw;
   min-height: 100vh;

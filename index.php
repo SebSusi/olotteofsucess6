@@ -5,6 +5,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -17,11 +21,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 </head>
 <body>
+
     <ul class="navbar">
       <li><a class="active" href="#home">Accueil</a></li>
       <li><a href="#club">Mes Clubs</a></li>
       <li><a href="#param">Paramètres</a></li>
       <li><a href="#contact">Contact</a></li>
+	  <li><a href="creationclubs.php">Créer ton club!</a></li>
+	  <li><a href="rejoindreclubs.php">Rejoindre un club</a></li>
       <li id="recherche">
 
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
@@ -41,15 +48,77 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     </ul>
 
+
+
+
+
+
+
 <div id="home">
 <div class="page-header">
         <h1>   <b>Bonjour, <strong><?php echo htmlspecialchars($_SESSION["username"]); ?></strong>   </b>   </h1>
     </div>
 <div id="centre">
-  <h2>Club du moment</h2>
+  <h2>Clubs Validés</h2>
   <div id="para">
-  <p>Foot</p>
-  <p>Basket</p>
+  
+  <?php
+	try	
+	{
+		$link = new PDO('mysql:host=localhost;dbname=project', 'root', '');
+		array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
+
+	}
+  
+  catch (Exception $e)
+	{
+	 die('Erreur : ' . $e->getMessage()); 
+	}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  $reponse = $link->query('SELECT * FROM clubs');
+  
+  
+	while ($donnees = $reponse->fetch())
+	{
+		?>
+	
+
+	
+	
+	
+	<p>
+	 <?php if($donnees['statut_clubs']==1){?> <strong> Club </strong> : <?php echo $donnees['clubs_title'];} ?> <br />
+		
+	</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  <?php
+	}
+	$reponse->closeCursor();
+	
+	?>
+  
+  
+  
+  
+  
+  
+  
+  
   </div>
 </div>
 
@@ -58,9 +127,45 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <div id="centre">
   <h2>Vous faites actuellement parti des clubs suivants :</h2>
   <br>
-  <p>Football</p>
+  <p>
+  
+  
+  
+  
+  <?php
+  
+	$sessionid = $_SESSION['id'];
+	
+  
+    $reponse = $link->query("SELECT DISTINCT clubs.clubs_title, users.username, usersclubs.IDUSERS, 
+	usersclubs.IDCLUBS FROM clubs, users, usersclubs WHERE users.id = usersclubs.IDUSERS 
+	AND clubs.id = usersclubs.IDCLUBS AND IDUSERS = '".$sessionid."' ");
+  
+  
+
+  
+	while ($donnees = $reponse->fetch())
+	{
+		?>
+	<p>
+	<strong> Club : </strong>  <?php echo $donnees['clubs_title']; ?> <br /><br />
+	
+	</p>
+  <?php
+	
+	}
+	$reponse->closeCursor();
+	
+	?>
+  
+  </p>
 </div>
 </div>
+
+
+
+
+
 <div id="param">
 <div id="centre">
 <h2>Paramètres de compte</h2>
@@ -72,11 +177,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </p>
 </div>
 </div>
+
+
+
+
+
 <div id="contact">
 <div id="centre">
-  <h2>Clubs EPSI</h2> 
+  <h2>Clubs EPSI</h2>
+<p> massi.bouharati@epsi.fr </p>  
 </div>
 </div>
+
+
+
+
+
 <div id="result">
 </div>
 </body>

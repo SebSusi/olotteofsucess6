@@ -48,10 +48,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 
 <div id="centre">
-  <h2>Club du moment</h2>
+  <h2>Clubs du moment</h2>
   <div id="para">
-  <p>Foot</p>
-  <p>Basket</p>
+
+  
+  
+  
+  
+  
   </div>
 </div>
 

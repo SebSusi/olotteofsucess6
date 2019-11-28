@@ -33,7 +33,7 @@
 }
 
 body {
-  display:inline-block;
+  display:inline;
 }
 #champ{
   font-weight: bold;
