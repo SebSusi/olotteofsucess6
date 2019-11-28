@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_concept/screens/home.dart';
+import 'package:flutter_travel_concept/screens/liste777.dart';
 import 'package:flutter_travel_concept/widgets/icon_badge.dart';
 import 'package:flutter_travel_concept/screens/map.dart';
+
 
 class MainScreen extends StatefulWidget {
   @override
@@ -33,6 +35,7 @@ class _MainScreenState extends State<MainScreen> {
         children: <Widget>[
         Home(),
         MapScreen(),
+        CheckScreen(),
       ],
       ),
       bottomNavigationBar: BottomAppBar(
