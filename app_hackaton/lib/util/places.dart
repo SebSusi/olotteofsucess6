@@ -1,63 +1,38 @@
 List places = [
   {
-    "name": "Boulangerie Fournil",
+    "name": "Star10",
     "img": "assets/boulangerie1.jpeg",
-    "price": r"3 personnes s'y rendent",
+    "price": r"35e deux heures",
     "location": "0.3km",
     "details": ""
-        "Sandwich invendu de la veille"
-        "Contient du pain, du beurre, salade, tomate, mozza.",
+        "",
   },
   {
-    "name": "Le Petit Italien",
+    "name": "Optimum8",
     "img": "assets/italien.jpeg",
-    "price": r"1 personnes s'y rend",
+    "price": r"50e deux heures",
     "location": "1.2km",
-    "details": "Le restaurant chez Luigi vous propose un plat de pate à emporté spécialement réalisé pour les étudiants.",
+    "details": "",
   },
   {
-    "name": "La Pomme Dorée",
+    "name": "HA20LEPRO",
     "img": "assets/boulangerie2.jpeg",
-    "price": r"5 personnes s'y rendent",
+    "price": r"70e deux heures",
     "location": "0.5km",
-    "details": "Pellentesque in ipsum id orci porta dapibus. "
-        "Nulla porttitor accumsan tincidunt. Donec rutrum "
-        "congue leo eget malesuada. "
-        "\n\nPraesent sapien massa, convallis a pellentesque "
-        "nec, egestas non nisi. Donec rutrum congue leo eget malesuada. "
-        "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. "
-        "Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. "
-        "\nCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. "
-        "Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
+    "details": "",
   },
   {
-    "name": "Le Plat de Pate",
-    "img": "assets/pates.jpeg",
-    "price": r"1 personnes s'y rendent",
+    "name": "HA16RTJPRO",
+    "img": "assets/haulotte.jpeg",
+    "price": r"80e deux heures",
     "location": "2.3km",
-    "details": "Pellentesque in ipsum id orci porta dapibus. "
-        "Nulla porttitor accumsan tincidunt. Donec rutrum "
-        "congue leo eget malesuada. "
-        "\nPraesent sapien massa, convallis a pellentesque "
-        "nec, egestas non nisi. Donec rutrum congue leo eget malesuada. "
-        "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. "
-        "Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. "
-        "\nCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. "
-        "Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
+    "details": "",
   },
   {
-    "name": "Chez Léo",
-    "img": "assets/boulangerie2.jpeg",
-    "price": r"1 personnes s'y rendent",
+    "name": "HTL4017 Tier IV FINAL",
+    "img": "assets/haulotte2.jpeg",
+    "price": r"80e deux heures",
     "location": "2.0km",
-    "details": "Pellentesque in ipsum id orci porta dapibus. "
-        "Nulla porttitor accumsan tincidunt. Donec rutrum "
-        "congue leo eget malesuada. "
-        "\nPraesent sapien massa, convallis a pellentesque "
-        "nec, egestas non nisi. Donec rutrum congue leo eget malesuada. "
-        "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. "
-        "Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. "
-        "\nCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. "
-        "Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.",
+    "details": "",
   },
 ];

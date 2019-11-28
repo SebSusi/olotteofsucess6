@@ -45,11 +45,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/boulangerie1.jpeg
     - assets/boulangerie2.jpeg
     - assets/italien.jpeg
-    - assets/pates.jpeg
-    - assets/sandwich.jpeg
     - assets/map_chemin.jpeg
     - assets/map_marker.jpeg
 

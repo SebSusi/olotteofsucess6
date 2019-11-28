@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
           Padding(
             padding: EdgeInsets.all(20),
             child: Text(
-              "On mange quoi aujourd'hui?",
+              "Nacelles disponibles",
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.w600,
