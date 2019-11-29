@@ -49,10 +49,10 @@ flutter:
     - assets/boulangerie1.jpeg
     - assets/boulangerie2.jpeg
     - assets/italien.jpeg
-    - assets/pates.jpeg
-    - assets/sandwich.jpeg
     - assets/map_chemin.jpeg
     - assets/map_marker.jpeg
+    - assets/haulotte2.jpg
+    - assets/pates.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

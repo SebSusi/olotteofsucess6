@@ -23,14 +23,14 @@ List places = [
   },
   {
     "name": "HA16RTJPRO",
-    "img": "assets/haulotte.jpeg",
+    "img": "assets/pates.jpg",
     "price": r"80e deux heures",
     "location": "2.3km",
     "details": "",
   },
   {
     "name": "HTL4017 Tier IV FINAL",
-    "img": "assets/haulotte2.jpeg",
+    "img": "assets/haulotte2.jpg",
     "price": r"80e deux heures",
     "location": "2.0km",
     "details": "",
