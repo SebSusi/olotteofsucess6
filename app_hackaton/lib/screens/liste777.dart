@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:flutter_travel_concept/screens/galerie_take.dart';
+import 'package:flutter_travel_concept/screens/request.dart';
 import 'package:http/http.dart' as http;
 
 import 'dart:convert';
@@ -52,6 +54,8 @@ class User {
 //     );
 //   }
 // }
+
+
 
 class CheckScreen extends StatefulWidget {
   @override
@@ -138,7 +142,12 @@ class _CheckScreenState extends State {
                   ]),
             );
           },
-        ));
+        ),floatingActionButton: FloatingActionButton(
+        onPressed: () {FavoriteScreen();},
+        child: Icon(
+          Icons.photo_camera,
+        ),
+      ));
   }
 
   void _pushAbsentLateScreen(usersAbsent) {

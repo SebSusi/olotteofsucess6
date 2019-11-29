@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_concept/screens/details.dart';
+import 'package:flutter_travel_concept/screens/galerie_take.dart';
+import 'package:flutter_travel_concept/screens/request.dart';
 import 'package:flutter_travel_concept/widgets/icon_badge.dart';
 import 'package:flutter_travel_concept/util/places.dart';
 import 'package:flutter_travel_concept/screens/main_screen.dart';
+import 'dart:io';
+import 'package:image_picker_modern/image_picker_modern.dart';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class Home extends StatefulWidget {
   @override
@@ -11,6 +17,34 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final TextEditingController _searchControl = new TextEditingController();
+  File _image;
+Future getImage() async {
+    var image = await ImagePicker.pickImage(source: ImageSource.gallery);
+    setState(() {
+      _image = image;
+    });
+    uploadimage();
+  }
+
+  uploadimage() async {
+    setState(() {
+    });
+    // print(_image);
+   String form = '{"images_file=@nacelle.jpg", "threshold=0.6", "classifier_ids=CheckinCheckout_1358473836"}';
+    final response = await http.post(
+      'https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19',
+      headers: {HttpHeaders.authorizationHeader: "apikey:{oEKGDuDT5A6gkCNjjksvoKD0dj5Xg-tJo9Ma7T1lwytO}"},
+      body: form,
+    );
+    print(response.body);
+    // print(_desc);
+    // print(_title);
+    if (response.statusCode == 200) {
+      print(response.body);
+      setState(() {
+      });
+    }
+  }
 
 
   @override
@@ -278,6 +312,11 @@ class _HomeState extends State<Home> {
           ),
         ],
       ),
-    );
+    floatingActionButton: FloatingActionButton(
+        onPressed: getImage,
+        child: Icon(
+          Icons.photo_camera,
+        ),
+      ));
   }
 }
