@@ -9,6 +9,9 @@ import 'dart:io';
 import 'package:image_picker_modern/image_picker_modern.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'package:flutter/material.dart';
+
 
 class Home extends StatefulWidget {
   @override
@@ -25,10 +28,12 @@ Future getImage() async {
     });
     uploadimage();
   }
+ 
 
   uploadimage() async {
     setState(() {
     });
+    
     // print(_image);
    String form = '{"images_file=@nacelle.jpg", "threshold=0.6", "classifier_ids=CheckinCheckout_1358473836"}';
     final response = await http.post(
