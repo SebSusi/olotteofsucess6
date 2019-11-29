@@ -106,7 +106,7 @@ Future getImage() async {
                     borderSide: BorderSide(color: Colors.white,),
                     borderRadius: BorderRadius.circular(5.0),
                   ),
-                  hintText: "Sandwich, pates, salades, ...",
+                  hintText: "Chercher une nacelle",
                   prefixIcon: Icon(
                     Icons.search,
                     color: Colors.blueGrey[300],

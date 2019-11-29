@@ -53,6 +53,8 @@ flutter:
     - assets/italien.jpeg
     - assets/map_chemin.jpeg
     - assets/map_marker.jpeg
+    - assets/haulotte2.jpg
+    - assets/pates.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

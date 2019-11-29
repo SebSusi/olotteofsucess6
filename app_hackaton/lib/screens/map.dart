@@ -21,7 +21,7 @@ class _MapScreenState extends State<MapScreen> {
           onPressed: () {
             Alert(
                 context: context,
-                title: "Où comptes tu aller?",
+                title: "Nacelles disponibles?",
                 content: Column(
                   children: <Widget>[
                     TextField(
@@ -41,7 +41,7 @@ class _MapScreenState extends State<MapScreen> {
                       obscureText: true,
                       decoration: InputDecoration(
                         icon: Icon(Icons.maximize),
-                        labelText: 'Nombre max de commandes:',
+                        labelText: 'Nacelles choisie:',
                       ),
                     ),
                     TextField(
@@ -58,7 +58,7 @@ class _MapScreenState extends State<MapScreen> {
                     onPressed: () => Navigator.pop(context),
                     child: Text(
                       
-                      "Proposer un trajet",
+                      "Proposer une nacelle",
                       style: TextStyle(color: Colors.black, fontSize: 20),
                     ),
                   )
